@@ -11,8 +11,10 @@ class Gyp < Formula
 	# initialize the installation of this
 	def install
 
+		# intialize setup arguments for python
 		install_args = ["setup.py", "install"]
 
+		# use the brew python to install the tools needed
 		python do
 		
 			system python, *install_args
