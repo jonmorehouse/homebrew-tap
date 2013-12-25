@@ -2,19 +2,26 @@ require 'formula'
 
 #In the future, this module should custom build ios-sim using ruby / rake
 #for now, simply use the latest npm and use nsm
-#class IosSim < Formula
+class IosSim < Formula
 	
-	#url "https://github.com/phonegap/ios-sim", :using => :git	
-	#version "1.0"
+	url "https://github.com/phonegap/ios-sim", :using => :git	
+	homepage "https://github.com/phonegap/ios-sim"
+	version "1.0"
 
-	##depends_on "ruby"
+	def install
 
-	#def install
+		# check to see if the user has rake
+		rake_exists = %s["which rake"]
 
-		## now check the version
-		##system "npm install -g ios-sim"
+		# if the rake executable doesn't exist, we want to have the user start over with this installed
+		if rake_exists == nil
 
-	#end
+			puts "Please install rake using your preferred ruby gem setup"
 
+		else
 
-#end
+			system "rake install prefix=/usr/local/"
+
+		end
+	end
+end
