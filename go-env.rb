@@ -11,6 +11,11 @@ class GoEnv < Formula
 	def install
 		
 		# want to install all files that end with .sh
+		lib.install "lib/freeze.sh"
+		lib.install "lib/help.sh"
+		lib.install "lib/install.sh"
+		lib.install "lib/destroy.sh"
 
+		bin.install "bin/go-env"
 	end
 end
