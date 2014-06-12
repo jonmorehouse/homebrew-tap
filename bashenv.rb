@@ -4,7 +4,7 @@ class Bashenv < Formula
   
   url "https://github.com/jonmorehouse/bashenv", :using => :git
 
-  version "1.0"
+  version "1.1"
 
   def install
     bin.install "bashenv"
