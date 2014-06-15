@@ -2,7 +2,7 @@ require 'formula'
 
 class Pass < Formula
   homepage 'http://zx2c4.com/projects/password-store'
-  url 'https://github.com/marblenix/password-store-bugfix', :using => :git
+  url 'https://github.com/jonmorehouse/password-store-osx', :using => :git
   head 'http://git.zx2c4.com/password-store', :using => :git
 
   depends_on 'pwgen'
